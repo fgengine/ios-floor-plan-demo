@@ -23,13 +23,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 angle: AngleFloat(degrees: 15),
                 snap: AngleFloat(degrees: 3)
             ),
+            rule: Settings.Guide.Rule(
+                size: 10,
+                snap: 3
+            ),
             grid: Settings.Guide.Grid(
                 size: PointFloat(x: 10, y: 10),
                 snap: PointFloat(x: 3, y: 3)
             ),
-            rule: Settings.Guide.Rule(
-                size: 10,
-                snap: 3
+            lines: Settings.Guide.Lines(
+                snap: 5
             )
         ),
         manipulator: Settings.Manipulator(
