@@ -5,9 +5,9 @@
         "package": "FloorPlan",
         "repositoryURL": "https://github.com/danielclipnow/ios-floor-plan-module.git",
         "state": {
-          "branch": "master",
+          "branch": null,
           "revision": "39941709641a3fad1960ce09a3652410a077af30",
-          "version": null
+          "version": "0.0.1"
         }
       },
       {
