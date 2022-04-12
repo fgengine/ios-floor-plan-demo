@@ -110,9 +110,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     )
                 )
             ),
-            windowMove: Settings.Theme.Manipulator(
-                image: Image(name: "Window-Move")
-            ),
             windowDrop: Settings.Theme.Manipulator(
                 image: Image(name: "Window-Drop")
             ),
@@ -129,9 +126,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                         fill: .color(Color(rgb: 0x202020))
                     )
                 )
-            ),
-            doorMove: Settings.Theme.Manipulator(
-                image: Image(name: "Door-Move")
             ),
             doorDrop: Settings.Theme.Manipulator(
                 image: Image(name: "Door-Drop")
