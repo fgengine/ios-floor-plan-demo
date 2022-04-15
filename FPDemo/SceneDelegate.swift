@@ -129,6 +129,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     )
                 )
             ),
+            doorSelect: Settings.Theme.Door(
+                frame: Settings.Theme.Door.Frame(
+                    fill: .color(Color(rgb: 0x357baa)),
+                    stroke: GraphicsStroke(
+                        width: 1,
+                        fill: .color(Color(UIColor.darkGray))
+                    )
+                ),
+                leaf: Settings.Theme.Door.Leaf(
+                    stroke: GraphicsStroke(
+                        width: 1,
+                        fill: .color(Color(rgb: 0x357baa))
+                    )
+                )
+            ),
             doorDrop: Settings.Theme.Manipulator(
                 image: Image(name: "Door-Drop")
             )
