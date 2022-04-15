@@ -98,15 +98,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             ),
             window: Settings.Theme.Window(
                 frame: Settings.Theme.Window.Frame(
+                    fill: .color(Color(rgb: 0xA4B2CB)),
                     stroke: GraphicsStroke(
                         width: 1,
-                        fill: .color(Color(rgb: 0x202020))
+                        fill: .color(Color(UIColor.darkGray))
                     )
                 ),
                 casement: Settings.Theme.Window.Casement(
                     stroke: GraphicsStroke(
                         width: 1,
-                        fill: .color(Color(rgb: 0x202020))
+                        fill: .color(Color(UIColor.darkGray))
                     )
                 )
             ),
@@ -124,7 +125,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 leaf: Settings.Theme.Door.Leaf(
                     stroke: GraphicsStroke(
                         width: 1,
-                        fill: .color(Color(rgb: 0x202020))
+                        fill: .color(Color(UIColor.darkGray))
                     )
                 )
             ),
@@ -139,7 +140,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window: Settings.Defaults.Window(
                 offset: 8.5,
                 size: SizeFloat(
-                    width: 11,
+                    width: 30,
                     height: 10
                 )
             ),
