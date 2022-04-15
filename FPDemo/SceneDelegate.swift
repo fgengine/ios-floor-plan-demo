@@ -111,6 +111,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     )
                 )
             ),
+            windowSelect: Settings.Theme.Window(
+                frame: Settings.Theme.Window.Frame(
+                    fill: .color(Color(rgb: 0x357baa)),
+                    stroke: GraphicsStroke(
+                        width: 1,
+                        fill: .color(Color(UIColor.darkGray))
+                    )
+                ),
+                casement: Settings.Theme.Window.Casement(
+                    stroke: GraphicsStroke(
+                        width: 1,
+                        fill: .color(Color(UIColor.darkGray))
+                    )
+                )
+            ),
             windowDrop: Settings.Theme.Manipulator(
                 image: Image(name: "Window-Drop")
             ),
