@@ -135,19 +135,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         ),
         defaults: Settings.Defaults(
             wall: Settings.Defaults.Wall(
-                thickness: 4
+                thickness: 10
             ),
             window: Settings.Defaults.Window(
                 offset: 8.5,
                 size: SizeFloat(
-                    width: 30,
+                    width: 35,
                     height: 10
                 )
             ),
             door: Settings.Defaults.Door(
                 offset: 0,
                 size: SizeFloat(
-                    width: 30,
+                    width: 35,
                     height: 22
                 )
             )
@@ -160,7 +160,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let stage = Project.Stage()
         project.append(stage: stage)
         let room = Project.Stage.Room(
-            size: Size(width: 200, height: 160), thickness: 4
+            size: Size(width: 200, height: 160), thickness: self.stagePlanSettings.defaults.wall.thickness
         )
         if let wall = room.walls.first {
             let window = Project.Stage.Room.Wall.Window(
