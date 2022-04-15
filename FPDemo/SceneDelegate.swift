@@ -115,9 +115,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             ),
             door: Settings.Theme.Door(
                 frame: Settings.Theme.Door.Frame(
+                    fill: .color(Color(rgb: 0x888888)),
                     stroke: GraphicsStroke(
                         width: 1,
-                        fill: .color(Color(rgb: 0x202020))
+                        fill: .color(Color(UIColor.darkGray))
                     )
                 ),
                 leaf: Settings.Theme.Door.Leaf(
@@ -145,7 +146,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             door: Settings.Defaults.Door(
                 offset: 0,
                 size: SizeFloat(
-                    width: 8,
+                    width: 30,
                     height: 22
                 )
             )
@@ -158,7 +159,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let stage = Project.Stage()
         project.append(stage: stage)
         let room = Project.Stage.Room(
-            size: Size(width: 200, height: 160), thickness: 8
+            size: Size(width: 200, height: 160), thickness: 4
         )
         if let wall = room.walls.first {
             let window = Project.Stage.Room.Wall.Window(
