@@ -142,7 +142,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                         width: 1,
                         fill: .color(Color(UIColor.darkGray))
                     )
-                )
+                ),
+                leafStartLocation: PercentFloat(0.05),
+                leafEndLocation: PercentFloat(0.95)
             ),
             doorSelect: Settings.Theme.Door(
                 frame: Settings.Theme.Door.Frame(
@@ -157,7 +159,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                         width: 1,
                         fill: .color(Color(rgb: 0x357baa))
                     )
-                )
+                ),
+                leafStartLocation: PercentFloat(0.05),
+                leafEndLocation: PercentFloat(0.95)
             ),
             doorDrop: Settings.Theme.Manipulator(
                 image: Image(name: "Door-Drop")

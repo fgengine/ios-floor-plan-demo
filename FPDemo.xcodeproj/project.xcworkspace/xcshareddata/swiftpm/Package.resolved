@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "FloorPlan",
+        "repositoryURL": "https://github.com/danielclipnow/ios-floor-plan-module.git",
+        "state": {
+          "branch": null,
+          "revision": "43915eeab199dda199c75ed580383130449a9734",
+          "version": "0.0.10"
+        }
+      },
+      {
         "package": "KindKit",
         "repositoryURL": "https://github.com/KindKit/KindKit.git",
         "state": {
