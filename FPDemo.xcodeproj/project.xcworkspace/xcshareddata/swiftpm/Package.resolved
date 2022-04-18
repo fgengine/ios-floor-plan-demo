@@ -1,25 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "FloorPlan",
-        "repositoryURL": "https://github.com/danielclipnow/ios-floor-plan-module.git",
-        "state": {
-          "branch": null,
-          "revision": "43915eeab199dda199c75ed580383130449a9734",
-          "version": "0.0.10"
-        }
-      },
-      {
-        "package": "KindKit",
-        "repositoryURL": "https://github.com/KindKit/KindKit.git",
-        "state": {
-          "branch": null,
-          "revision": "bb80f8f259c26568e8a243520dd13b07614f513d",
-          "version": "0.0.8"
-        }
+  "pins" : [
+    {
+      "identity" : "ios-floor-plan-module",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/danielclipnow/ios-floor-plan-module.git",
+      "state" : {
+        "revision" : "4779873228059f2a5a29f739d73ae5c8ad399420",
+        "version" : "0.0.11"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "kindkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/KindKit/KindKit.git",
+      "state" : {
+        "revision" : "bb80f8f259c26568e8a243520dd13b07614f513d",
+        "version" : "0.0.8"
+      }
+    }
+  ],
+  "version" : 2
 }
