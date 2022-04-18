@@ -187,11 +187,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let project = Project(
             settings: self.stagePlanSettings
         )
-        let stage = Project.Stage()
+        let stage = Project.Stage(name: "First floor")
         project.append(stage: stage)
-        let room = Project.Stage.Room(
-            size: Size(width: 200, height: 160), thickness: self.stagePlanSettings.defaults.wall.thickness
+        
+        let room = Project.Stage.Room.make(
+            name: "First room",
+            size: Size(width: 200, height: 160),
+            thickness: self.stagePlanSettings.defaults.wall.thickness
         )
+        stage.append(room: room)
+        
         if let wall = room.walls.first {
             let window = Project.Stage.Room.Wall.Window(
                 origin: .half,
@@ -199,6 +204,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             )
             wall.append(window: window)
         }
+        
         if let wall = room.walls.last {
             let door = Project.Stage.Room.Wall.Door(
                 origin: .half,
@@ -206,7 +212,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             )
             wall.append(door: door)
         }
-        stage.append(room: room)
+        
         return project
     }()
     lazy var stagePlanEditor = FloorPlanEditor.Module()
