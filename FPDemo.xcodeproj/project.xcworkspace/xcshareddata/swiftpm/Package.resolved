@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/danielclipnow/ios-floor-plan-module.git",
         "state": {
           "branch": null,
-          "revision": "c76a67cab883615bf57dde5176a55e1effd8491d",
-          "version": "0.0.15"
+          "revision": "527b8e325c89b9f4c282504683e415a5a597e72d",
+          "version": "0.0.16"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/KindKit/KindKit.git",
         "state": {
           "branch": null,
-          "revision": "b0baf0661e7f1f8a7cd3fbe82a95100bc016a4a0",
-          "version": "0.0.9"
+          "revision": "93e933b440098dc0b9360605c263183c1859933d",
+          "version": "0.0.10"
         }
       }
     ]
