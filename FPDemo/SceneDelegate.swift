@@ -72,17 +72,49 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 image: Image(name: "Corner-Drop")
             ),
             wall: Settings.Theme.Wall(
-                stroke: GraphicsStroke(
-                    width: 2,
-                    cap: .round,
-                    fill: .color(Color(rgb: 0x202020))
+                base: Settings.Theme.Wall.Base (
+                    stroke: GraphicsStroke(
+                        width: 2,
+                        cap: .round,
+                        fill: .color(Color(rgb: 0x202020))
+                    )
+                ),
+                measurement: Settings.Theme.Wall.Measurement(
+                    fill: .color(Color(UIColor.gray)),
+                    stroke: GraphicsStroke(
+                        width: 0.5,
+                        fill: .color(Color(UIColor.gray))
+                    )
+                ),
+                measurementGuide: Settings.Theme.Wall.MeasurementGuide(
+                    stroke: GraphicsStroke(
+                        width: 1,
+                        dash: GraphicsLineDash(phase: 0, lengths: [3,3]),
+                        fill: .color(Color(UIColor.gray))
+                    )
                 )
             ),
             wallSelect: Settings.Theme.Wall(
-                stroke: GraphicsStroke(
-                    width: 4,
-                    cap: .round,
-                    fill: .color(Color(rgb: 0x357baa))
+                base: Settings.Theme.Wall.Base (
+                    stroke: GraphicsStroke(
+                        width: 4,
+                        cap: .round,
+                        fill: .color(Color(rgb: 0x357baa))
+                    )
+                ),
+                measurement: Settings.Theme.Wall.Measurement(
+                    fill: .color(Color(UIColor.gray)),
+                    stroke: GraphicsStroke(
+                        width: 1,
+                        fill: .color(Color(UIColor.gray))
+                    )
+                ),
+                measurementGuide: Settings.Theme.Wall.MeasurementGuide(
+                    stroke: GraphicsStroke(
+                        width: 1,
+                        dash: GraphicsLineDash(phase: 0, lengths: [2,1]),
+                        fill: .color(Color(UIColor.gray))
+                    )
                 )
             ),
             wallExtrude: Settings.Theme.Manipulator(
@@ -203,6 +235,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             size: Size(width: 200, height: 160),
             thickness: self.stagePlanSettings.defaults.wall.thickness
         )
+        if let wall = room.walls.first {
+            let window = wall.window(
+                origin: .half,
+                defaults: self.stagePlanSettings.defaults.window
+            )
+        }
+        
+        if let wall = room.walls.last {
+            let door = wall.door(
+                origin: .half,
+                defaults: self.stagePlanSettings.defaults.door,
+                isPrimary: true
+            )
+        }
         return project
     }()
     lazy var stagePlanEditor = FloorPlanEditor.Module()
