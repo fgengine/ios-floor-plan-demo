@@ -17,6 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     lazy var stagePlanSettings = Settings(
+        simplifyDistance: 5,
         selectDistance: 20,
         guide: Settings.Guide(
             viewport: Settings.Guide.Viewport(
@@ -96,39 +97,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             wallMakeDoor: Settings.Theme.Manipulator(
                 image: Image(name: "Wall-MakeDoor")
             ),
-            window: Settings.Theme.Window(
-                frame: Settings.Theme.Window.Frame(
-                    fill: .color(Color(rgb: 0xA4B2CB)),
-                    stroke: GraphicsStroke(
-                        width: 1,
-                        fill: .color(Color(UIColor.darkGray))
-                    )
-                ),
-                casement: Settings.Theme.Window.Casement(
-                    stroke: GraphicsStroke(
-                        width: 1,
-                        fill: .color(Color(UIColor.darkGray))
-                    )
-                )
-            ),
-            windowSelect: Settings.Theme.Window(
-                frame: Settings.Theme.Window.Frame(
-                    fill: .color(Color(rgb: 0x357baa)),
-                    stroke: GraphicsStroke(
-                        width: 1,
-                        fill: .color(Color(UIColor.darkGray))
-                    )
-                ),
-                casement: Settings.Theme.Window.Casement(
-                    stroke: GraphicsStroke(
-                        width: 1,
-                        fill: .color(Color(UIColor.darkGray))
-                    )
-                )
-            ),
-            windowDrop: Settings.Theme.Manipulator(
-                image: Image(name: "Window-Drop")
-            ),
             door: Settings.Theme.Door(
                 frame: Settings.Theme.Door.Frame(
                     fill: .color(Color(rgb: 0x888888)),
@@ -163,8 +131,44 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 leafStartLocation: PercentFloat(0.05),
                 leafEndLocation: PercentFloat(0.95)
             ),
+            doorMakeRoom: Settings.Theme.Manipulator(
+                image: Image(name: "Door-MakeRoom")
+            ),
             doorDrop: Settings.Theme.Manipulator(
                 image: Image(name: "Door-Drop")
+            ),
+            window: Settings.Theme.Window(
+                frame: Settings.Theme.Window.Frame(
+                    fill: .color(Color(rgb: 0xA4B2CB)),
+                    stroke: GraphicsStroke(
+                        width: 1,
+                        fill: .color(Color(UIColor.darkGray))
+                    )
+                ),
+                casement: Settings.Theme.Window.Casement(
+                    stroke: GraphicsStroke(
+                        width: 1,
+                        fill: .color(Color(UIColor.darkGray))
+                    )
+                )
+            ),
+            windowSelect: Settings.Theme.Window(
+                frame: Settings.Theme.Window.Frame(
+                    fill: .color(Color(rgb: 0x357baa)),
+                    stroke: GraphicsStroke(
+                        width: 1,
+                        fill: .color(Color(UIColor.darkGray))
+                    )
+                ),
+                casement: Settings.Theme.Window.Casement(
+                    stroke: GraphicsStroke(
+                        width: 1,
+                        fill: .color(Color(UIColor.darkGray))
+                    )
+                )
+            ),
+            windowDrop: Settings.Theme.Manipulator(
+                image: Image(name: "Window-Drop")
             )
         ),
         defaults: Settings.Defaults(
