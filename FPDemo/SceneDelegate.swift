@@ -89,7 +89,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 measurementGuide: Settings.Theme.Wall.MeasurementGuide(
                     stroke: GraphicsStroke(
                         width: 1,
-                        dash: GraphicsLineDash(phase: 0, lengths: [3,3]),
+                        dash: GraphicsLineDash(phase: 0, lengths: [ 3, 3 ]),
                         fill: .color(Color(UIColor.gray))
                     )
                 )
@@ -112,7 +112,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 measurementGuide: Settings.Theme.Wall.MeasurementGuide(
                     stroke: GraphicsStroke(
                         width: 1,
-                        dash: GraphicsLineDash(phase: 0, lengths: [2,1]),
+                        dash: GraphicsLineDash(phase: 0, lengths: [ 2, 1 ]),
                         fill: .color(Color(UIColor.gray))
                     )
                 )
