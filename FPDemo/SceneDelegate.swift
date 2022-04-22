@@ -201,6 +201,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             ),
             windowDrop: Settings.Theme.Manipulator(
                 image: Image(name: "Window-Drop")
+            ),
+            guide: Settings.Theme.Guide(
+                stroke: GraphicsStroke(
+                    width: 1,
+                    dash: GraphicsLineDash(phase: 0, lengths: [ 5, 5 ]),
+                    fill: .color(Color(UIColor.red))
+                )
             )
         ),
         defaults: Settings.Defaults(
