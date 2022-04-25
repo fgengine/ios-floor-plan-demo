@@ -367,7 +367,7 @@
 			repositoryURL = "https://github.com/danielclipnow/ios-floor-plan-module.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.22;
+				minimumVersion = 0.0.23;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
