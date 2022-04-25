@@ -19,190 +19,218 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     lazy var stagePlanSettings = Settings(
         simplifyDistance: 5,
         selectDistance: 20,
-        guide: Settings.Guide(
-            viewport: Settings.Guide.Viewport(
+        guide: .init(
+            viewport: .init(
                 angle: AngleFloat(degrees: 15),
                 snap: AngleFloat(degrees: 3)
             ),
-            rule: Settings.Guide.Rule(
+            rule: .init(
                 size: 10,
                 snap: 3
             ),
-            grid: Settings.Guide.Grid(
+            grid: .init(
                 size: PointFloat(x: 10, y: 10),
                 snap: PointFloat(x: 3, y: 3)
             ),
-            lines: Settings.Guide.Lines(
+            lines: .init(
                 snap: 5
             )
         ),
-        manipulator: Settings.Manipulator(
+        manipulator: .init(
             offset: 50,
             spacing: 4,
             radius: 22
         ),
-        viewport: Settings.Viewport(
+        viewport: .init(
             canMove: true,
             canRotation: true,
             canScale: true,
             scaleLimit: 0.1..<2.0
         ),
-        theme: Settings.Theme(
-            room: Settings.Theme.Room(
-                fill: .pattern(GraphicsPattern(
-                    image: Image(name: "Wall-Pattern")
-                )),
-                stroke: GraphicsStroke(
-                    width: 1,
-                    fill: .color(Color(rgb: 0x202020))
-                )
-            ),
-            corner: Settings.Theme.Corner(
-                radius: DistanceFloat(real: 3),
-                fill: .color(Color(rgb: 0x202020))
-            ),
-            cornerSelect: Settings.Theme.Corner(
-                radius: DistanceFloat(real: 6),
-                fill: .color(Color(rgb: 0x357baa))
-            ),
-            cornerBevel: Settings.Theme.Manipulator(
-                image: Image(name: "Corner-Bevel")
-            ),
-            cornerDrop: Settings.Theme.Manipulator(
-                image: Image(name: "Corner-Drop")
-            ),
-            wall: Settings.Theme.Wall(
-                base: Settings.Theme.Wall.Base (
+        theme: .init(
+            room: .init(
+                style: .init(
+                    fill: .pattern(GraphicsPattern(
+                        image: Image(name: "Wall-Pattern")
+                    )),
                     stroke: GraphicsStroke(
-                        width: 2,
-                        cap: .round,
+                        width: 1,
                         fill: .color(Color(rgb: 0x202020))
                     )
                 ),
-                measurement: Settings.Theme.Wall.Measurement(
-                    fill: .color(Color(UIColor.gray)),
-                    stroke: GraphicsStroke(
-                        width: 0.5,
-                        fill: .color(Color(UIColor.gray))
-                    )
-                ),
-                measurementGuide: Settings.Theme.Wall.MeasurementGuide(
-                    stroke: GraphicsStroke(
-                        width: 1,
-                        dash: GraphicsLineDash(phase: 0, lengths: [ 3, 3 ]),
-                        fill: .color(Color(UIColor.gray))
-                    )
+                name: .init(
+                    attributes: [
+                        .font: UIFont.systemFont(ofSize: 14, weight: .regular),
+                        .foregroundColor: UIColor.red,
+                    ]
                 )
             ),
-            wallSelect: Settings.Theme.Wall(
-                base: Settings.Theme.Wall.Base (
-                    stroke: GraphicsStroke(
-                        width: 4,
-                        cap: .round,
-                        fill: .color(Color(rgb: 0x357baa))
-                    )
+            corner: .init(
+                style: .init(
+                    fill: .color(Color(rgb: 0x202020))
                 ),
-                measurement: Settings.Theme.Wall.Measurement(
-                    fill: .color(Color(UIColor.gray)),
-                    stroke: GraphicsStroke(
-                        width: 1,
-                        fill: .color(Color(UIColor.gray))
-                    )
+                radius: DistanceFloat(real: 3)
+            ),
+            cornerSelect: Settings.Theme.Corner(
+                style: .init(
+                    fill: .color(Color(rgb: 0x357baa))
                 ),
-                measurementGuide: Settings.Theme.Wall.MeasurementGuide(
-                    stroke: GraphicsStroke(
-                        width: 1,
-                        dash: GraphicsLineDash(phase: 0, lengths: [ 2, 1 ]),
-                        fill: .color(Color(UIColor.gray))
-                    )
+                radius: DistanceFloat(real: 6)
+            ),
+            cornerBevel: .init(
+                image: Image(name: "Corner-Bevel")
+            ),
+            cornerDrop: .init(
+                image: Image(name: "Corner-Drop")
+            ),
+            wall: .init(
+                stroke: GraphicsStroke(
+                    width: 2,
+                    cap: .round,
+                    fill: .color(Color(rgb: 0x202020))
                 )
             ),
-            wallExtrude: Settings.Theme.Manipulator(
+            wallSelect: .init(
+                stroke: GraphicsStroke(
+                    width: 4,
+                    cap: .round,
+                    fill: .color(Color(rgb: 0x357baa))
+                )
+            ),
+            wallExtrude: .init(
                 image: Image(name: "Wall-Extrude")
             ),
-            wallDrop: Settings.Theme.Manipulator(
+            wallDrop: .init(
                 image: Image(name: "Wall-Drop")
             ),
-            wallMakeWindow: Settings.Theme.Manipulator(
+            wallMakeWindow: .init(
                 image: Image(name: "Wall-MakeWindow")
             ),
-            wallMakeDoor: Settings.Theme.Manipulator(
+            wallMakeDoor: .init(
                 image: Image(name: "Wall-MakeDoor")
             ),
-            door: Settings.Theme.Door(
-                frame: Settings.Theme.Door.Frame(
+            door: .init(
+                frame: .init(
                     fill: .color(Color(rgb: 0x888888)),
                     stroke: GraphicsStroke(
                         width: 1,
                         fill: .color(Color(UIColor.darkGray))
                     )
                 ),
-                leaf: Settings.Theme.Door.Leaf(
-                    stroke: GraphicsStroke(
-                        width: 1,
-                        fill: .color(Color(UIColor.darkGray))
-                    )
-                ),
-                leafStartLocation: PercentFloat(0.05),
-                leafEndLocation: PercentFloat(0.95)
+                leaf: .init(
+                    style: .init(
+                        stroke: GraphicsStroke(
+                            width: 1,
+                            fill: .color(Color(UIColor.darkGray))
+                        )
+                    ),
+                    startLocation: PercentFloat(0.05),
+                    endLocation: PercentFloat(0.95)
+                )
             ),
-            doorSelect: Settings.Theme.Door(
-                frame: Settings.Theme.Door.Frame(
+            doorSelect: .init(
+                frame: .init(
                     fill: .color(Color(rgb: 0x357baa)),
                     stroke: GraphicsStroke(
                         width: 1,
                         fill: .color(Color(UIColor.darkGray))
                     )
                 ),
-                leaf: Settings.Theme.Door.Leaf(
-                    stroke: GraphicsStroke(
-                        width: 1,
-                        fill: .color(Color(rgb: 0x357baa))
-                    )
-                ),
-                leafStartLocation: PercentFloat(0.05),
-                leafEndLocation: PercentFloat(0.95)
+                leaf: .init(
+                    style: .init(
+                        stroke: GraphicsStroke(
+                            width: 1,
+                            fill: .color(Color(rgb: 0x357baa))
+                        )
+                    ),
+                    startLocation: PercentFloat(0.05),
+                    endLocation: PercentFloat(0.95)
+                )
             ),
-            doorMakeRoom: Settings.Theme.Manipulator(
+            doorMakeRoom: .init(
                 image: Image(name: "Door-MakeRoom")
             ),
-            doorDrop: Settings.Theme.Manipulator(
+            doorDrop: .init(
                 image: Image(name: "Door-Drop")
             ),
-            window: Settings.Theme.Window(
-                frame: Settings.Theme.Window.Frame(
+            window: .init(
+                frame: .init(
                     fill: .color(Color(rgb: 0xA4B2CB)),
                     stroke: GraphicsStroke(
                         width: 1,
                         fill: .color(Color(UIColor.darkGray))
                     )
                 ),
-                casement: Settings.Theme.Window.Casement(
+                casement: .init(
                     stroke: GraphicsStroke(
                         width: 1,
                         fill: .color(Color(UIColor.darkGray))
                     )
                 )
             ),
-            windowSelect: Settings.Theme.Window(
-                frame: Settings.Theme.Window.Frame(
+            windowSelect: .init(
+                frame: .init(
                     fill: .color(Color(rgb: 0x357baa)),
                     stroke: GraphicsStroke(
                         width: 1,
                         fill: .color(Color(UIColor.darkGray))
                     )
                 ),
-                casement: Settings.Theme.Window.Casement(
+                casement: .init(
                     stroke: GraphicsStroke(
                         width: 1,
                         fill: .color(Color(UIColor.darkGray))
                     )
                 )
             ),
-            windowDrop: Settings.Theme.Manipulator(
+            windowDrop: .init(
                 image: Image(name: "Window-Drop")
             ),
-            guide: Settings.Theme.Guide(
+            measurement: .init(
+                arrow: .init(
+                    fill: .color(Color(UIColor.gray)),
+                    stroke: GraphicsStroke(
+                        width: 0.5,
+                        fill: .color(Color(UIColor.gray))
+                    )
+                ),
+                guide: .init(
+                    stroke: GraphicsStroke(
+                        width: 1,
+                        dash: GraphicsLineDash(phase: 0, lengths: [ 3, 3 ]),
+                        fill: .color(Color(UIColor.gray))
+                    )
+                ),
+                text: .init(
+                    attributes: [
+                        .font: UIFont.systemFont(ofSize: 14, weight: .regular),
+                        .foregroundColor: UIColor.darkGray,
+                    ]
+                )
+            ),
+            measurementSelect: .init(
+                arrow: .init(
+                    fill: .color(Color(rgb: 0x357baa)),
+                    stroke: GraphicsStroke(
+                        width: 0.5,
+                        fill: .color(Color(rgb: 0x357baa))
+                    )
+                ),
+                guide: .init(
+                    stroke: GraphicsStroke(
+                        width: 1,
+                        dash: GraphicsLineDash(phase: 0, lengths: [ 3, 3 ]),
+                        fill: .color(Color(rgb: 0x357baa))
+                    )
+                ),
+                text: .init(
+                    attributes: [
+                        .font: UIFont.systemFont(ofSize: 14, weight: .regular),
+                        .foregroundColor: UIColor.red,
+                    ]
+                )
+            ),
+            guide: .init(
                 stroke: GraphicsStroke(
                     width: 1,
                     dash: GraphicsLineDash(phase: 0, lengths: [ 5, 5 ]),
@@ -215,7 +243,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 thickness: 10
             ),
             window: Settings.Defaults.Window(
-                offset: 8.5,
+                offset: 0,
                 size: SizeFloat(
                     width: 35,
                     height: 10
