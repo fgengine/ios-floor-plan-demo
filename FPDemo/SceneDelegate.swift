@@ -50,13 +50,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         theme: .init(
             room: .init(
                 style: .init(
-                    fill: .pattern(GraphicsPattern(
-                        image: Image(name: "Wall-Pattern")
-                    )),
-                    stroke: GraphicsStroke(
-                        width: 1,
-                        fill: .color(Color(rgb: 0x202020))
-                    )
+                    fill: .color(Color(rgb: 0x606060))
                 ),
                 name: .init(
                     attributes: [
@@ -203,7 +197,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 ),
                 text: .init(
                     attributes: [
-                        .font: UIFont.systemFont(ofSize: 14, weight: .regular),
+                        .font: UIFont.systemFont(ofSize: 10, weight: .regular),
                         .foregroundColor: UIColor.darkGray,
                     ]
                 )
@@ -225,7 +219,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 ),
                 text: .init(
                     attributes: [
-                        .font: UIFont.systemFont(ofSize: 14, weight: .regular),
+                        .font: UIFont.systemFont(ofSize: 10, weight: .regular),
                         .foregroundColor: UIColor.red,
                     ]
                 )
