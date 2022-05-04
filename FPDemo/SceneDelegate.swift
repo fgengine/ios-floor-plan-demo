@@ -38,8 +38,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         ),
         manipulator: .init(
             offset: 50,
-            spacing: 4,
-            radius: 22
+            spacing: -4,
+            radius: 28
         ),
         viewport: .init(
             canMove: true,
