@@ -141,6 +141,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     endLocation: PercentFloat(0.95)
                 )
             ),
+            doorSwap: .init(
+                image: Image(name: "Door-Swap")
+            ),
             doorMakeRoom: .init(
                 image: Image(name: "Door-MakeRoom")
             ),
