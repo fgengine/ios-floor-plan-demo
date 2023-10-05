@@ -11,7 +11,11 @@
 		40C1FF1827D9DBA500DCE83A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C1FF1727D9DBA500DCE83A /* SceneDelegate.swift */; };
 		40C1FF1F27D9DBA600DCE83A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C1FF1E27D9DBA600DCE83A /* Assets.xcassets */; };
 		40C1FF2227D9DBA600DCE83A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C1FF2027D9DBA600DCE83A /* LaunchScreen.storyboard */; };
-		40FDBFBC280577B7007F01C3 /* FloorPlanEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 40FDBFBB280577B7007F01C3 /* FloorPlanEditor */; };
+		591499FE2ACEA18B00637ADE /* FloorPlan in Frameworks */ = {isa = PBXBuildFile; productRef = 591499FD2ACEA18B00637ADE /* FloorPlan */; };
+		59149A012ACEA9A200637ADE /* Screen+Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59149A002ACEA9A200637ADE /* Screen+Editor.swift */; };
+		592A5EAF2B076B86000AA3FF /* Screen+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A5EAD2B076B86000AA3FF /* Screen+Menu.swift */; };
+		592A5EB02B076B86000AA3FF /* Screen+Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A5EAE2B076B86000AA3FF /* Screen+Scanner.swift */; };
+		592A5EB32B0778A9000AA3FF /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A5EB22B0778A9000AA3FF /* Wireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,12 @@
 		40C1FF1E27D9DBA600DCE83A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40C1FF2127D9DBA600DCE83A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40C1FF2327D9DBA600DCE83A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59149A002ACEA9A200637ADE /* Screen+Editor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Screen+Editor.swift"; sourceTree = "<group>"; };
+		592A5EAD2B076B86000AA3FF /* Screen+Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Screen+Menu.swift"; sourceTree = "<group>"; };
+		592A5EAE2B076B86000AA3FF /* Screen+Scanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Screen+Scanner.swift"; sourceTree = "<group>"; };
+		592A5EB22B0778A9000AA3FF /* Wireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
+		59AF67F028F82A7E007A6508 /* ios-floor-plan-module */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ios-floor-plan-module"; path = "../ios-floor-plan-module"; sourceTree = "<group>"; };
+		59FF9B1B296DD0150024F10F /* KindKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = KindKit; path = ../../KindKit/KindKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40FDBFBC280577B7007F01C3 /* FloorPlanEditor in Frameworks */,
+				591499FE2ACEA18B00637ADE /* FloorPlan in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +48,8 @@
 		40C1FF0927D9DBA500DCE83A = {
 			isa = PBXGroup;
 			children = (
+				59FF9B1B296DD0150024F10F /* KindKit */,
+				59AF67F028F82A7E007A6508 /* ios-floor-plan-module */,
 				40C1FF1427D9DBA500DCE83A /* FPDemo */,
 				40C1FF1327D9DBA500DCE83A /* Products */,
 				40C1FF2D27D9DF4800DCE83A /* Frameworks */,
@@ -55,6 +67,8 @@
 		40C1FF1427D9DBA500DCE83A /* FPDemo */ = {
 			isa = PBXGroup;
 			children = (
+				592A5EB12B07789D000AA3FF /* Wireframe */,
+				591499FF2ACEA98600637ADE /* Screen */,
 				40C1FF1527D9DBA500DCE83A /* AppDelegate.swift */,
 				40C1FF1727D9DBA500DCE83A /* SceneDelegate.swift */,
 				40C1FF1E27D9DBA600DCE83A /* Assets.xcassets */,
@@ -69,6 +83,24 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		591499FF2ACEA98600637ADE /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				592A5EAD2B076B86000AA3FF /* Screen+Menu.swift */,
+				592A5EAE2B076B86000AA3FF /* Screen+Scanner.swift */,
+				59149A002ACEA9A200637ADE /* Screen+Editor.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		592A5EB12B07789D000AA3FF /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				592A5EB22B0778A9000AA3FF /* Wireframe.swift */,
+			);
+			path = Wireframe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,7 +120,7 @@
 			);
 			name = FPDemo;
 			packageProductDependencies = (
-				40FDBFBB280577B7007F01C3 /* FloorPlanEditor */,
+				591499FD2ACEA18B00637ADE /* FloorPlan */,
 			);
 			productName = FPDemo;
 			productReference = 40C1FF1227D9DBA500DCE83A /* FPDemo.app */;
@@ -119,7 +151,6 @@
 			);
 			mainGroup = 40C1FF0927D9DBA500DCE83A;
 			packageReferences = (
-				40FDBFBA280577B7007F01C3 /* XCRemoteSwiftPackageReference "ios-floor-plan-module" */,
 			);
 			productRefGroup = 40C1FF1327D9DBA500DCE83A /* Products */;
 			projectDirPath = "";
@@ -147,8 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				592A5EAF2B076B86000AA3FF /* Screen+Menu.swift in Sources */,
+				59149A012ACEA9A200637ADE /* Screen+Editor.swift in Sources */,
+				592A5EB32B0778A9000AA3FF /* Wireframe.swift in Sources */,
 				40C1FF1627D9DBA500DCE83A /* AppDelegate.swift in Sources */,
 				40C1FF1827D9DBA500DCE83A /* SceneDelegate.swift in Sources */,
+				592A5EB02B076B86000AA3FF /* Screen+Scanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +252,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -288,10 +323,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MS642NFDRF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FPDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = Text;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Text;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Text;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
@@ -302,7 +340,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fgengine.FPDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appteam.FloorPlanDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -316,10 +354,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MS642NFDRF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FPDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = Text;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Text;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Text;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
@@ -330,7 +371,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fgengine.FPDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appteam.FloorPlanDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -361,22 +402,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		40FDBFBA280577B7007F01C3 /* XCRemoteSwiftPackageReference "ios-floor-plan-module" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/danielclipnow/ios-floor-plan-module.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.31;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		40FDBFBB280577B7007F01C3 /* FloorPlanEditor */ = {
+		591499FD2ACEA18B00637ADE /* FloorPlan */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 40FDBFBA280577B7007F01C3 /* XCRemoteSwiftPackageReference "ios-floor-plan-module" */;
-			productName = FloorPlanEditor;
+			productName = FloorPlan;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
